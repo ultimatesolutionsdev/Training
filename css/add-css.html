@@ -10,11 +10,28 @@
         color: green;
         font-size: 18px;
       }
+
+      .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+        height: 500px;
+      }
+      .center p{
+        /* padding: 20px; */
+      }
     </style>
   </head>
   <body>
     <p style="color: blue; font-weight: bold">This is inline CSS.</p>
     <p>This is internal CSS.</p>
     <p>This is external CSS.</p>
+    <div class="center">
+      <p>One</p>
+      <p>Two</p>
+      <p>Three</p>
+    </div>
   </body>
 </html>
