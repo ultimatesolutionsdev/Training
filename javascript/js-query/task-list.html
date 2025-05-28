@@ -69,21 +69,13 @@
 
         const li = document.createElement("li");
         li.textContent = taskText;
-
-        li.addEventListener("click", () => {
-          li.classList.toggle("done");
-        });
-
-        li.addEventListener("contextmenu", (e) => {
-          e.preventDefault();
-          li.remove();
-        });
-
+        
         taskList.appendChild(li);
         input.value = "";
       });
 
       input.addEventListener("keypress", (e) => {
+        console.log(e.key)
         if (e.key === "Enter") {
           addBtn.click();
         }
