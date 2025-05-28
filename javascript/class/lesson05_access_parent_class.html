@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessing Parent Class in JavaScript</title>
+  </head>
+  <body>
+    <h1>Accessing Parent Class in JavaScript</h1>
+    <script>
+      //🔹 1. Access Parent Constructor (variables)
+      //Use super() to call the parent class’s constructor and pass values to it.
+      class Parent {
+        constructor(name) {
+          this.name = name;
+        }
+      }
+
+      class Child extends Parent {
+        constructor(name, age) {
+          super(name); // Call Parent constructor
+          this.age = age;
+        }
+
+        showInfo() {
+          console.log(`Name: ${this.name}, Age: ${this.age}`);
+        }
+      }
+
+      const child = new Child("Alice", 12);
+      child.showInfo(); // Name: Alice, Age: 12
+
+      //🔹 2. Access Parent Methods
+      //Use super.methodName() to call a method from the parent class.
+      class Animal {
+        speak() {
+          console.log("Animal makes a sound");
+        }
+      }
+
+      class Dog extends Animal {
+        speak() {
+          super.speak(); // Call the parent method
+          console.log("Dog barks");
+        }
+      }
+
+      const dog = new Dog();
+      dog.speak();
+      // Output:
+      // Animal makes a sound
+      // Dog barks
+
+      //🔹 3. Access Parent Public Properties
+      //Just use this.propertyName if the property is public (not private or using #).
+      class Parent2 {
+        constructor() {
+          this.role = "admin";
+        }
+      }
+
+      class Child2 extends Parent2 {
+        getRole() {
+          return this.role; // ✅ Inherited from Parent
+        }
+      }
+
+      const c = new Child2();
+      console.log(c.getRole()); // admin
+    </script>
+  </body>
+</html>
