@@ -2,7 +2,7 @@
 
 import React from "react";
 
-//Example : Event in Class Component
+//Example5 : Event in Class Component
 export default class Person extends React.Component {
   constructor(props) {
     super(props);

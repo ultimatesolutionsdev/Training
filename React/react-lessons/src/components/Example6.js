@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-//Example : Event in Functional Component
+//Example6 : Event in Functional Component
 export default function Person() {
   const [name, setName] = useState("Mg Kyaw Min");
   const [email, setEmail] = useState("mkm@gmail.com");
