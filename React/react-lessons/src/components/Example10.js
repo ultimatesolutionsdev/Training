@@ -13,7 +13,7 @@ function LoginButton({ onClickButton }) {
 function UsernameInput({ value, onChangeName }) {
   return (
     <div>
-      <input onChange={(e) => onChangeName(e.target.value)} />
+      <input value={value} onChange={(e) => onChangeName(e.target.value)} />
     </div>
   );
 }

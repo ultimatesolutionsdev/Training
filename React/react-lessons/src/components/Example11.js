@@ -1,15 +1,27 @@
 "use client";
 
+import { useState } from "react";
+
 function Card(props) {
   return <div>{props.children}</div>;
 }
 
-//Example10: Passing a Children as a Prop
+function Heading({ text }) {
+  console.log("Heading Render");
+  return <div>{text}</div>;
+}
+//Example11: Passing a children as a Prop
 function Parent() {
+  const [headingText, setHeadingText] = useState("");
   return (
     <div>
       <div>
         <Card>
+          <input
+            value={headingText}
+            onChange={(e) => setHeadingText(e.target.value)}
+          />
+          <Heading text={headingText} />
           <h2>Welcome!</h2>
           <p>This is inside the card.</p>
         </Card>
