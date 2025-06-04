@@ -1,8 +1,12 @@
-import Example1 from "../components/Example1";
+import TodoList from "../components/Example23";
 export default function Home() {
+  const todoList = [
+    { id: 1, text: "Task 1" },
+    { id: 2, text: "Task 2" },
+  ];
   return (
     <div>
-      <Example1 />
+      <TodoList todos={todoList} />
     </div>
   );
 }
